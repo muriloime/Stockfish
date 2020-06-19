@@ -1,5 +1,5 @@
 language: cpp
-dist: xenial
+dist: bionic
 
 matrix:
   include:
@@ -8,7 +8,7 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-8', 'g++-8-multilib', 'g++-multilib', 'valgrind', 'expect', 'curl', 'python3', 'python3-pip']
+          packages: ['g++-8', 'g++-8-multilib', 'g++-multilib', 'valgrind', 'expect', 'curl', 'python3.6', 'python3-pip']
         artifacts:
           bucket: variant-stockfish
           s3_region: us-west-2
@@ -36,7 +36,7 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-xenial-6.0']
-          packages: ['clang-6.0', 'llvm-6.0-dev', 'g++-multilib', 'valgrind', 'expect', 'curl', 'python3', 'python3-pip']
+          packages: ['clang-6.0', 'llvm-6.0-dev', 'g++-multilib', 'valgrind', 'expect', 'curl', 'python3.6', 'python3-pip']
       env:
         - COMPILER=clang++-6.0
         - COMP=clang
